@@ -8,7 +8,7 @@ public class Ausgabe
 {
 
     public String TextAusgabe(double fach, double kern, double wiso, double arbeit, double doku,
-                              double prae, double gespr)
+            double prae, double gespr)
     {
 
         String ausgabe;
@@ -45,60 +45,60 @@ public class Ausgabe
 //</editor-fold>
 
 //<editor-fold defaultstate="collapsed" desc="Bestanden Theorie">
+        // Berechnung Theorie //
         if (fach < 31 || kern < 31 || wiso < 31)
         {
             bestanden = "Die Prüfung gilt als nicht bestanden.<br>"
                     + "Min. 31 Punkte pro Prüfungsteil sind zu erreichen.";
-        }
-        else if (wiso < 50)
+        } else if (wiso < 50)
         {
             if (pufferFQ + pufferKQ + wiso > 50)
             {
                 bestanden = "Die Prüfung gilt als bestanden.<br>"
                         + "WISO-Punkte wurden ausgeglichen.";
-            }
-            else
+            } else
             {
                 bestanden = "Die Prüfung gilt als nicht bestanden.<br>"
                         + "WISO-Punkte konnten nicht ausgeglichen werden.";
 
             }
-        }
-        else if (fach < 50)
+        } else if (fach < 50)
         {
             if (pufferKQ + fach > 50)
             {
                 bestanden = "Die Prüfung gilt als bestanden.<br>"
                         + "FachQuali-Punkte wurden ausgeglichen.";
-            }
-            else
+            } else
             {
                 bestanden = "Die Prüfung gilt als nicht bestanden.<br>"
                         + "FachQuali-Punkte konnten nicht ausgeglichen werden.";
             }
 
-        }
-        else if (kern < 50)
+        } else if (kern < 50)
         {
             if (pufferFQ + kern > 50)
             {
                 bestanden = "Die Prüfung gilt als bestanden.<br>"
                         + "KernQuali-Punkte wurden ausgeglichen.";
-            }
-            else
+            } else
             {
                 bestanden = "Die Prüfung gilt als nicht bestanden.<br>"
                         + "KernQuali-Punkte konnten nicht ausgeglichen werden.";
 
             }
-        }
-        else
+        } else
         {
             bestanden = "Die Prüfung gilt als bestanden.<br>"
                     + "Die Punkte der Teilbereiche sind ausreichend.";
 
         }
-//</editor-fold>
+
+        //</editor-fold>
+        // Berechnung Projekt //
+        double[] projektArray =
+        {
+            arbeit, doku, prae, gespr
+        };
 
 //<editor-fold defaultstate="collapsed" desc="Ausgabe">
         ausgabe = "<html><body>"
