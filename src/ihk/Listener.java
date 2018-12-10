@@ -37,11 +37,12 @@ public class Listener implements ActionListener
             Gui.panelTheorie.setVisible(false);
             Gui.panelProjekt.setVisible(false);
             Gui.button.setVisible(false);
+            Gui.panelHeader.setVisible(false);
             Gui.panelAusw.setVisible(true);
             Gui.button2.setVisible(true);
 
-            Gui.ausgabeBorder.setTitle("IHK Abschlussprüfung " + beruf);
-            Gui.headerLabel.setText("Auswertung für: " + vorname + " " + nachname);
+            Gui.ausgabeBorder.setTitle("IHK Abschlussprüfung " + beruf
+                    + " " + vorname + " " + nachname);
 
             Ausgabe ausgabe = new Ausgabe();
             String ausgabeString = ausgabe.TextAusgabe(fach, kern, wiso, arbeit, doku, praes, gespr);
@@ -56,6 +57,7 @@ public class Listener implements ActionListener
             Gui.panelTheorie.setVisible(true);
             Gui.panelProjekt.setVisible(true);
             Gui.button.setVisible(true);
+            Gui.panelHeader.setVisible(true);
             Gui.panelAusw.setVisible(false);
             Gui.button2.setVisible(false);
         }

@@ -94,11 +94,7 @@ public class Ausgabe
         }
 
         //</editor-fold>
-        // Berechnung Projekt //
-        double[] projektArray =
-        {
-            arbeit, doku, prae, gespr
-        };
+
 
 //<editor-fold defaultstate="collapsed" desc="Ausgabe">
         ausgabe = "<html><body>"
@@ -114,7 +110,9 @@ public class Ausgabe
                 + "<br>"
                 + "Gesamt: " + theoGesamt + " von 300"
                 + "<br>"
+                + "<b><font color = 'rgb(43, 203, 186)'>"
                 + bestanden
+                + "</font></b>"
                 + "<br><br>"
                 + "<b><u>Punkte Theorie nach Gewichtung: </u></b>"
                 + "<br><br>"
@@ -126,7 +124,8 @@ public class Ausgabe
                 + "<br>"
                 + "Gesamt: " + theorie
                 + "<br>"
-                + "<b>Teilnote A: " + note + "</b>"
+                + "<b><b><font color = 'rgb(43, 203, 186)'>"
+                + "Teilnote A: <u>" + note + "</u></b></font>"
                 + "<br><br>"
                 + "<b><u>Punkte Projekt (Gewichtung je 25%): </u></b>"
                 + "<br><br>"
@@ -145,8 +144,9 @@ public class Ausgabe
                 + "Gesamt: " + projGesamt
                 + " (Gewichtet " + projekt + ")"
                 + "<br>"
-                + "<b>Teilnote B: " + noteProjekt
-                + "<br><br>"
+                + "<b><b><font color = 'rgb(43, 203, 186)'>"
+                + "Teilnote B: <u>" + noteProjekt
+                + "</u></font></b><br><br>"
                 + "<font size='4'>"
                 + "Abschlussprüfung Punkte Gesamt (je 50% Gewichtung): " + gesamtNote
                 + "<br>"
